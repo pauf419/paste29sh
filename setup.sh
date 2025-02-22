@@ -26,6 +26,10 @@ echo -e "\n--- ETH3 [Setting up client & server] ---\n"
 mkdir client 
 mkdir server
 
+sudo apt install -y build-essential python3
+
+npm install -g node-gyp
+
 git clone https://github.com/pauf419/rentry.git ./client -b client
 npm --prefix ./client i && npm --prefix ./client run build
 
@@ -35,5 +39,3 @@ git clone https://github.com/pauf419/rentry.git ./server -b server
 npm --prefix ./server i
 
 echo -e "\n---INFO: server node_modules installed and ready to start(WARNING: .prod.env edit and database transfer required) ---\n"
-
-
